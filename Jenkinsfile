@@ -10,12 +10,12 @@ git 'https://github.com/mohammadazeez963/javaProject.git'
     
         stage('compile') {
             steps {
-                echo 'compiling'
+                bat 'mvn clean compile'
             }
         }
         stage('Run') {
             steps {
-                echo 'Running'
+               bat 'mvn package'
             }
         }
              stage('Test Report using jacoco') {
